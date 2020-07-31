@@ -3,7 +3,7 @@
 ![I'm an Android App developer, who designs and develops beautiful native Android apps. ](https://camo.githubusercontent.com/992babdffd8c74a1502de375fbdf7e4d54773242/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53576f536b4e36447854737a71494b4571762f67697068792e676966)
 
 
-Skills: Kotlin / Flutter / Java / Python / Front End Development
+Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
 
 - 🔭 I’m currently working on ML projects.  
 - 🌱 I’m currently learning Neural Networks, Digital Image Processing and Computer Vision. 
