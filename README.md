@@ -17,6 +17,6 @@ Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=bhardwajAbhi&show_icons=true)  
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=morristech&layout=compact&hide=html" alt="morristech" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bhardwajAbhi&layout=compact&hide=html" alt="bhardwajAbhi" /></p>
 
 ![Profile views](https://gpvc.arturio.dev/bhardwajAbhi)
