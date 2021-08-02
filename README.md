@@ -15,6 +15,7 @@ Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/bhardwajAbhi)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/bhardwaj-abhi/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg' alt='facebook' height='40'>](https://www.facebook.com/abhishekbhardwaj100)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' height='40'>](https://www.instagram.com/_abhishek.bhardwaj/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/_AbhiBhardwaj)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/buymeacoffee.svg' alt='buymeacoffee' height='40'>](https://www.buymeacoffee.com/AbhiBhardwaj)  
 
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=bhardwajAbhi&show_icons=true)
   
 ![Profile views](https://gpvc.arturio.dev/bhardwajAbhi)
 
