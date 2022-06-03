@@ -28,8 +28,8 @@ Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
 
 
 
+<p>
 
-</br>
 
 ## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_badge.svg)](https://repography.com)
 [![Timeline graph](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_timeline.svg)](https://github.com/bhardwajAbhi/bhardwajAbhi/commits)
