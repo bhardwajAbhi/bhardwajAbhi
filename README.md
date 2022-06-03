@@ -21,3 +21,20 @@ Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
 <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bhardwajAbhi&layout=compact&hide=html" alt="bhardwajAbhi" />
 
 ![Profile views](https://gpvc.arturio.dev/bhardwajAbhi)
+
+
+
+
+
+
+
+
+
+
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_badge.svg)](https://repography.com)
+[![Timeline graph](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_timeline.svg)](https://github.com/bhardwajAbhi/bhardwajAbhi/commits)
+[![Issue status graph](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_issues.svg)](https://github.com/bhardwajAbhi/bhardwajAbhi/issues)
+[![Pull request status graph](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_prs.svg)](https://github.com/bhardwajAbhi/bhardwajAbhi/pulls)
+[![Trending topics](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_words.svg)](https://github.com/bhardwajAbhi/bhardwajAbhi/commits)
+[![Top contributors](https://images.repography.com/26210777/bhardwajAbhi/bhardwajAbhi/recent-activity/6a0205d2770679b74e3dba06cbd26b02_users.svg)](https://github.com/bhardwajAbhi/bhardwajAbhi/graphs/contributors)
+
