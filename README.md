@@ -1,6 +1,6 @@
 ### Hi there 👋, नमस्ते (Namaste)🙏🏻, I'm Abhishek Bhardwaj
 #### I'm an Android App developer, who designs and develops beautiful native Android apps. 
-![I'm an Android App developer, who designs and develops beautiful native apps. ](https://camo.githubusercontent.com/992babdffd8c74a1502de375fbdf7e4d54773242/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53576f536b4e36447854737a71494b4571762f67697068792e676966)
+![I'm an Android App developer, who designs and develops beautiful native apps. ](https://images.squarespace-cdn.com/content/v1/5769fc401b631bab1addb2ab/1541580611624-TE64QGKRJG8SWAIUS7NS/coding-freak.gif?format=1000w)
 
 
 Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
