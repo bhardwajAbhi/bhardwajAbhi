@@ -12,6 +12,7 @@ Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
 - 📫 How to reach me: abhishekbhardwaj090@gmail.com 
 - ⚡ Fun fact: I do Miniature Modelling!! 🤖🚀🚗🛠 
 
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ec1ad401-d25a-4172-ae2c-1a4afbfb241b" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/bhardwajAbhi) &emsp; [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/bhardwaj-abhi/) &emsp; [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg' alt='facebook' height='40'>](https://www.facebook.com/abhishekbhardwaj100) &emsp;  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' height='40'>](https://www.instagram.com/_abhishek.bhardwaj/) &emsp; [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/_AbhiBhardwaj) &emsp; [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/buymeacoffee.svg' alt='buymeacoffee' height='40'>](https://www.buymeacoffee.com/AbhiBhardwaj)  
 
