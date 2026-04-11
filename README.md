@@ -12,7 +12,7 @@ Skills: C++ / Kotlin / Flutter / Java / Python / Front End Development
 - ⚡ Fun fact: I do Miniature Modelling!! 🤖🚀🚗🛠
 
 ### Certifications
-<img src='https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/179588696' alt='eJPT'>
+[<img src='https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/179588696' alt='eJPT'>](https://certs.ine.com/21f6613d-1c5c-4e37-9147-d2bea5a3926a#acc.DguO1viM)
 
 
 #### Social
