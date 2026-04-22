@@ -1,5 +1,3 @@
-<script src="https://keepandroidopen.org/banner.js"></script>
-
 ### Hi there 👋, नमस्ते (Namaste)🙏🏻, I'm Abhishek Bhardwaj
 #### I'm an Android App developer, who designs and develops beautiful native Android apps. 
 ![I'm an Android App developer, who designs and develops beautiful native apps. ](https://images.squarespace-cdn.com/content/v1/5769fc401b631bab1addb2ab/1541580611624-TE64QGKRJG8SWAIUS7NS/coding-freak.gif?format=1000w)
