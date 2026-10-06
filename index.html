@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhishek | Mobile Security Engineer</title>
+<meta name="description" content="Abhishek is a mobile security engineer working on the security of mobile applications and platforms and the protection of personal data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A7E8C'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='42' font-weight='600' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F8FAFC;
+    --paper-2: #EEF3F8;
+    --ink: #0E2235;
+    --ink-2: #22374B;
+    --muted: #3C5268;
+    --rule: #D3DDE7;
+    --teal: #0A7E8C;
+    /* focus areas */
+    --a-app: #15925E;
+    --a-threat: #D43D5E;
+    --a-platform: #0A8A99;
+    --a-privacy: #7046D4;
+    --a-ai: #2D6BE0;
+    /* figure */
+    --plate-top: #FFFFFF;
+    --plate-left: #C3D2E0;
+    --plate-right: #DCE6F0;
+    --plate-edge: #9FB3C6;
+    --serif: "Newsreader", Georgia, serif;
+    --sans: "Hanken Grotesk", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0B1320;
+      --paper-2: #131E2E;
+      --ink: #E8EEF6;
+      --ink-2: #D0DBE7;
+      --muted: #B0BFCF;
+      --rule: #26354A;
+      --teal: #3FC7D3;
+      --a-app: #3FD08F;
+      --a-threat: #FF6F8C;
+      --a-platform: #3FC7D3;
+      --a-privacy: #A98BFF;
+      --a-ai: #6FA1FF;
+      --plate-top: #16243A;
+      --plate-left: #0C1626;
+      --plate-right: #111D30;
+      --plate-edge: #34496A;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; text-decoration-color: color-mix(in srgb, var(--teal) 55%, transparent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--teal); }
+  :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+  /* ---------- top bar ---------- */
+  header.bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    padding: 28px 0 0;
+    font-family: var(--sans); font-size: 15px;
+  }
+  .bar .home { display: inline-flex; align-self: center; text-decoration: none; }
+  .mark {
+    width: 36px; height: 36px; border-radius: 9px; display: grid; place-items: center;
+    background: var(--teal); color: #fff;
+    font-family: var(--serif); font-size: 23px; font-weight: 600; line-height: 1;
+    transition: background .25s;
+  }
+  .bar .home:hover .mark { background: var(--ink); }
+  .bar nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  .bar nav a { text-decoration: none; color: var(--ink-2); }
+  .bar nav a:hover { color: var(--teal); }
+
+  /* ---------- intro: hero beside the figure ---------- */
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    column-gap: 24px;
+    align-items: center;
+    padding: 56px 0 64px;
+  }
+  .hero h1 {
+    font-weight: 400;
+    font-size: clamp(40px, 4.8vw, 58px);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    margin: 0 0 28px;
+    font-variation-settings: "opsz" 72;
+  }
+  .hero h1 .name { display: block; font-weight: 500; }
+  .hero h1 .line { display: block; color: var(--ink-2); font-style: italic; font-weight: 300; }
+  .hero p.lede { font-size: 20px; line-height: 1.55; max-width: 34em; margin: 0 0 18px; color: var(--ink-2); }
+  .hero .actions { margin-top: 28px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; font-family: var(--sans); font-size: 15px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; border-radius: 999px;
+    border: 1px solid var(--rule); text-decoration: none; color: var(--ink);
+    background: transparent;
+    transition: border-color .2s, background .2s, color .2s;
+  }
+  .btn:hover { border-color: var(--teal); color: var(--teal); }
+  .btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .btn.primary:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
+
+  /* ---------- the system diagram ---------- */
+  figure.stack { margin: 0; }
+  figure.stack svg { width: 100%; height: auto; display: block; overflow: visible; }
+  #stack text { font-family: var(--sans); }
+  /* ecosystem sphere */
+  #stack .sphere { fill: url(#sphere-fill); stroke: var(--plate-edge); stroke-width: 1; }
+  #stack .s0 { stop-color: var(--plate-top); stop-opacity: .9; }
+  #stack .s1 { stop-color: var(--paper-2); stop-opacity: .55; }
+  #stack .lat { fill: none; stroke: var(--plate-edge); stroke-width: .7; opacity: .45; }
+  #stack .node { fill: var(--plate-top); stroke: var(--plate-edge); stroke-width: 1; }
+  #stack .nglyph { fill: none; stroke: var(--ink-2); stroke-width: 1.2; stroke-linejoin: round; }
+  #stack .scan { fill: none; stroke: var(--a-threat); stroke-width: 1.4; stroke-dasharray: 4 3; }
+  #stack .eco-t { font-weight: 600; fill: var(--ink); }
+  #stack .eco-s { font-size: 14px; fill: var(--muted); }
+  #stack .eco-n { font-weight: 500; fill: var(--muted); }
+  /* applied AI core */
+  #stack .g0 { stop-color: var(--a-ai); stop-opacity: .34; }
+  #stack .g1 { stop-color: var(--a-ai); stop-opacity: .1; }
+  #stack .g2 { stop-color: var(--a-ai); stop-opacity: 0; }
+  #stack .ai-t { font-weight: 600; fill: var(--a-ai); }
+  #stack .ai-s { fill: var(--muted); }
+  #stack .thread { stroke: var(--a-ai); stroke-width: 1; stroke-dasharray: 2 4; opacity: .55; }
+  /* orbits */
+  #stack .orbit { fill: none; stroke-width: 1; opacity: .5; }
+  #stack .orbit-app { stroke: var(--a-app); } #stack .orbit-threat { stroke: var(--a-threat); }
+  #stack .orbit-platform { stroke: var(--a-platform); } #stack .orbit-privacy { stroke: var(--a-privacy); }
+  #stack .dot-app { fill: var(--a-app); } #stack .dot-threat { fill: var(--a-threat); }
+  #stack .dot-platform { fill: var(--a-platform); } #stack .dot-privacy { fill: var(--a-privacy); }
+  #stack .pill { fill: var(--plate-top); stroke-width: 1.2; }
+  #stack .pill-app { stroke: var(--a-app); } #stack .pill-threat { stroke: var(--a-threat); }
+  #stack .pill-platform { stroke: var(--a-platform); } #stack .pill-privacy { stroke: var(--a-privacy); }
+  #stack .pill-t { font-weight: 600; fill: var(--ink); }
+  #stack .spin { transform-box: view-box; transform-origin: 0 0; }
+  /* phone and stack */
+  #stack .b0 { stop-color: var(--a-ai); stop-opacity: .12; }
+  #stack .b1 { stop-color: var(--a-ai); stop-opacity: 0; }
+  #stack .phone-body { fill: #2F4442; stroke: #2F4442; }
+  #stack .phone-side { fill: #17292A; stroke: #17292A; }
+  #stack .phone-notch { fill: #2F4442; }
+  #stack .phone-screen { fill: color-mix(in srgb, var(--a-ai) 30%, var(--plate-top)); }
+  #stack .face { fill: var(--plate-top); stroke: var(--plate-edge); stroke-width: 1; }
+  #stack .side { fill: var(--plate-left); stroke: var(--plate-edge); stroke-width: 1; }
+  #stack .screen { fill: var(--paper-2); stroke: var(--plate-edge); stroke-width: .8; }
+  #stack .icon { fill: var(--plate-top); stroke: var(--plate-edge); stroke-width: .8; }
+  #stack .icon-flag { fill: var(--a-threat); }
+  #stack .ring-threat { fill: none; stroke: var(--a-threat); stroke-width: 1.4; stroke-dasharray: 3 2; }
+  #stack .ai-edge { stroke: var(--a-ai); stroke-width: 1; opacity: .7; }
+  #stack .ai-node { fill: var(--a-ai); }
+  #stack .blk { fill: var(--plate-top); stroke: var(--plate-edge); stroke-width: .8; }
+  #stack .blk.on { fill: color-mix(in srgb, var(--a-app) 30%, var(--plate-top)); stroke: var(--a-app); }
+  #stack .sandbox { fill: none; stroke: var(--a-app); stroke-width: 1.6; stroke-dasharray: 4 3; }
+  #stack .bus { stroke: var(--plate-edge); stroke-width: 1.2; fill: none; }
+  #stack .mod { fill: color-mix(in srgb, var(--a-platform) 10%, var(--plate-top)); stroke: var(--a-platform); stroke-width: 1; }
+  #stack .glyph { fill: none; stroke: var(--a-platform); stroke-width: 1.1; }
+  #stack .trace { stroke: var(--plate-edge); stroke-width: 1; }
+  #stack .shield { fill: color-mix(in srgb, var(--a-platform) 14%, transparent); stroke: var(--a-platform); stroke-width: 1.6; }
+  #stack .chip { fill: var(--ink-2); }
+  #stack .core { fill: none; stroke: var(--paper); stroke-width: 1; opacity: .6; }
+  #stack .data { stroke: var(--a-privacy); stroke-width: 1.6; stroke-dasharray: 5 4; }
+  #stack .data-dot { fill: var(--a-privacy); }
+  #stack .data-halo { fill: color-mix(in srgb, var(--a-privacy) 18%, transparent); }
+  #stack .tag { font-weight: 600; fill: var(--ink-2); }
+  #stack .lead { stroke: var(--plate-edge); stroke-width: 1; stroke-dasharray: 2 3; }
+  @media (prefers-reduced-motion: no-preference) {
+    #stack .spin { animation: orbit linear infinite; }
+    #stack .spin.rev { animation-direction: reverse; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    #stack .layer { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
+    #stack .layer[data-i="0"] { animation-delay: .1s; }
+    #stack .layer[data-i="1"] { animation-delay: .22s; }
+    #stack .layer[data-i="2"] { animation-delay: .34s; }
+    #stack .layer[data-i="3"] { animation-delay: .46s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+  }
+  @media (max-width: 560px) { #stack .eco-n { display: none; } figure.stack { margin: 0 -18px; overflow: hidden; } figure.stack svg { width: 108%; margin-left: -4%; } #stack .tag, #stack .eco-s, #stack .ai-s { display: none; } }
+
+
+  /* label sizes */
+  #stack .tag { font-size: 18px; }
+  #stack .eco-n { font-size: 15.5px; }
+  #stack .eco-t { font-size: 21px; }
+  #stack .ai-t { font-size: 23px; }
+  #stack .ai-s { font-size: 16px; }
+  #stack .pill-t { font-size: 18px; }
+
+  /* research question cues */
+  #stack .lw { transition: opacity .6s; }
+  #stack .qcap, #stack .qpath { opacity: 0; transition: opacity .7s; pointer-events: none; }
+  #stack .qbg { fill: var(--ink); }
+  #stack .qmark-bg { fill: var(--a-threat); }
+  #stack .qmark { font-size: 15px; font-weight: 700; fill: #fff; }
+  #stack .qtext { font-size: 16.5px; font-weight: 500; fill: var(--paper); }
+  #stack .qpath { fill: none; stroke-width: 2; stroke-dasharray: 6 6; }
+  #stack .q2 { stroke: var(--a-threat); }
+  #stack .q4 { stroke: var(--a-privacy); }
+  #stack[data-q="1"] .qcap[data-n="1"], #stack[data-q="2"] .qcap[data-n="2"],
+  #stack[data-q="3"] .qcap[data-n="3"], #stack[data-q="4"] .qcap[data-n="4"],
+  #stack[data-q="2"] .q2, #stack[data-q="4"] .q4 { opacity: 1; }
+  /* 1: applications and the AI inside them */
+  #stack[data-q="1"] .layer:not([data-k="app"]) .lw { opacity: .4; }
+  #stack[data-q="1"] .layer[data-k="app"] .face { stroke: var(--a-ai); stroke-width: 2.4; }
+  /* 2: the flagged app and where apps come from */
+  #stack[data-q="2"] .layer[data-k="kern"] .lw, #stack[data-q="2"] .layer[data-k="hal"] .lw { opacity: .4; }
+  #stack[data-q="2"] .ring-threat, #stack[data-q="2"] .scan { stroke-width: 2.6; }
+  /* 4: the personal data thread */
+  #stack[data-q="4"] .data { stroke-width: 3; }
+  #stack[data-q="4"] .node-cloud { stroke: var(--a-privacy); stroke-width: 2; }
+  @media (prefers-reduced-motion: no-preference) {
+    #stack .qpath { animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    #stack[data-q="3"] .layer .face { animation: lglow 2.4s ease-in-out infinite; }
+    #stack[data-q="3"] .layer[data-i="1"] .face { animation-delay: .3s; }
+    #stack[data-q="3"] .layer[data-i="2"] .face { animation-delay: .6s; }
+    #stack[data-q="3"] .layer[data-i="3"] .face { animation-delay: .9s; }
+    @keyframes lglow { 0%, 100% { stroke: var(--plate-edge); stroke-width: 1; } 35% { stroke: var(--a-platform); stroke-width: 2.6; } }
+    #stack[data-q="2"] .ring-threat { animation: blink 1.2s ease-in-out infinite; }
+    @keyframes blink { 50% { stroke-opacity: .25; } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #stack[data-q="3"] .layer .face { stroke: var(--a-platform); stroke-width: 2.2; }
+  }
+
+  /* justified body text */
+  .hero p.lede, .research-intro, .research-close, .questions li, .work article p, footer.end p {
+    text-align: justify; hyphens: manual; -webkit-hyphens: manual;
+  }
+
+  /* ---------- sections ---------- */
+  section.block {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 40px;
+    padding: 56px 0;
+    border-top: 1px solid var(--rule);
+  }
+  section.block > h2 { font-weight: 500; font-size: 26px; line-height: 1.2; margin: 0; letter-spacing: -0.005em; color: var(--teal); }
+  section.block > h2 small { display: block; font-family: var(--sans); font-size: 14px; font-weight: 400; color: var(--muted); margin-top: 8px; line-height: 1.45; letter-spacing: 0; }
+  .col { max-width: 720px; }
+
+  /* research questions */
+  .research-intro { margin: 0 0 22px; color: var(--ink-2); font-size: 21px; line-height: 1.6; }
+  .questions { list-style: none; padding: 0; margin: 0 0 22px; counter-reset: q; }
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    margin: 4px 0 4px -24px; padding: 16px 24px 16px 58px; border-radius: 12px;
+    border-left: 3px solid transparent; cursor: default;
+    font-size: 22px; line-height: 1.5;
+    transition: background .4s, border-color .4s;
+  }
+  .questions li::before {
+    content: "";
+    position: absolute; left: 32px; top: 30px;
+    width: 8px; height: 8px; border-radius: 50%; background: var(--teal);
+  }
+  .questions li.on { background: color-mix(in srgb, var(--teal) 12%, var(--paper)); border-left-color: var(--teal); }
+  .research-close { color: var(--ink-2); margin: 0; font-size: 21px; line-height: 1.6; }
+  #research b { font-weight: 600; color: var(--ink); }
+  .hint { font-family: var(--sans); font-size: 14px; color: var(--muted); margin: 14px 0 0; }
+
+  /* area chips (same colors as the figure) */
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: var(--sans); font-size: 12.5px; font-weight: 500;
+    padding: 2px 10px 2px 8px; margin: 0 6px 4px 0; border-radius: 999px;
+    border: 1px solid var(--rule); color: var(--ink-2); line-height: 1.6;
+  }
+  .chip::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: currentColor; }
+  .chip.app { color: var(--a-app); } .chip.threat { color: var(--a-threat); }
+  .chip.platform { color: var(--a-platform); } .chip.privacy { color: var(--a-privacy); } .chip.ai { color: var(--a-ai); }
+  .chip.app, .chip.threat, .chip.platform, .chip.privacy, .chip.ai { border-color: color-mix(in srgb, currentColor 40%, var(--rule)); }
+
+  /* work */
+  .work { display: grid; gap: 36px; }
+  .work article h3 { font-size: 23px; font-weight: 500; margin: 0 0 6px; line-height: 1.3; }
+  .work article p { margin: 0 0 10px; color: var(--ink-2); }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; }
+  .ask {
+    display: inline-flex; align-items: center; gap: 7px; margin-left: 8px; margin-bottom: 4px;
+    padding: 3px 13px 3px 10px; border-radius: 999px;
+    font-family: var(--sans); font-size: 13px; font-weight: 600; line-height: 1.6; text-decoration: none;
+    color: var(--teal); border: 1px solid color-mix(in srgb, var(--teal) 45%, transparent);
+    transition: background .25s, color .25s, border-color .25s;
+  }
+  .ask-i { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; transition: transform .25s; }
+  .ask:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+  .ask:hover .ask-i { transform: translateY(-1px) rotate(-8deg); }
+
+  /* expertise */
+  .expertise { list-style: none; padding: 0; margin: 0; }
+  .expertise li { display: grid; grid-template-columns: 190px minmax(0,1fr); gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .expertise li:first-child { padding-top: 0; }
+  .expertise li:last-child { border-bottom: 0; }
+  .expertise .chip { justify-self: start; margin: 0; }
+  .expertise .desc { color: var(--ink-2); font-size: 18px; }
+
+  /* records */
+  .records { list-style: none; padding: 0; margin: 0; }
+  .records li { padding: 16px 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 24px; }
+  .records li:first-child { padding-top: 0; }
+  .records li:last-child { border-bottom: 0; }
+  .records .t { font-weight: 500; }
+  .records .d { color: var(--ink-2); grid-column: 1; font-size: 17px; }
+  .records .w { font-family: var(--sans); font-size: 14px; color: var(--muted); grid-column: 2; grid-row: 1; text-align: right; white-space: nowrap; }
+
+
+  /* areas of expertise */
+  .areas { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  /* with an odd number of boxes, the last one spans both columns */
+  .areas li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .areas li span { display: block; font-family: var(--sans); font-size: 14px; line-height: 1.45; color: var(--muted); margin-top: 6px; }
+  @media (max-width: 560px) { .areas { grid-template-columns: 1fr; } }
+  .areas li {
+    position: relative; padding: 18px 20px 18px 24px; border-radius: 12px;
+    background: var(--paper-2); font-size: 21px; line-height: 1.3; color: var(--ink);
+  }
+  .areas li::before { content: ""; position: absolute; left: 0; top: 14px; bottom: 14px; width: 4px; border-radius: 0 4px 4px 0; background: currentColor; }
+  .areas li.app::before { background: var(--a-app); } .areas li.threat::before { background: var(--a-threat); }
+  .areas li.platform::before { background: var(--a-platform); } .areas li.privacy::before { background: var(--a-privacy); }
+  .areas li.ai::before { background: var(--a-ai); }
+
+  /* highlight for the email button */
+  .btn.flash { animation: btnflash 1.8s ease-out 1; }
+  @keyframes btnflash {
+    0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--teal) 55%, transparent); background: var(--teal); border-color: var(--teal); }
+    30%  { box-shadow: 0 0 0 12px color-mix(in srgb, var(--teal) 0%, transparent); transform: scale(1.05); }
+    45%  { box-shadow: 0 0 0 0 color-mix(in srgb, var(--teal) 45%, transparent); transform: scale(1); }
+    75%  { box-shadow: 0 0 0 12px color-mix(in srgb, var(--teal) 0%, transparent); background: var(--teal); border-color: var(--teal); }
+    100% { box-shadow: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn.flash { animation: btnfade 1.8s ease-out 1; }
+    @keyframes btnfade { 0%, 60% { background: var(--teal); border-color: var(--teal); } }
+  }
+
+
+  /* ---------- color accents ---------- */
+  body {
+    background:
+      radial-gradient(900px 600px at 78% 8%, color-mix(in srgb, var(--a-ai) 10%, transparent), transparent 70%),
+      radial-gradient(700px 500px at 8% 30%, color-mix(in srgb, var(--teal) 8%, transparent), transparent 70%),
+      var(--paper);
+    background-repeat: no-repeat;
+  }
+  .areas li.app { background: color-mix(in srgb, var(--a-app) 9%, var(--paper)); }
+  .areas li.threat { background: color-mix(in srgb, var(--a-threat) 8%, var(--paper)); }
+  .areas li.platform { background: color-mix(in srgb, var(--a-platform) 9%, var(--paper)); }
+  .areas li.privacy { background: color-mix(in srgb, var(--a-privacy) 8%, var(--paper)); }
+  .areas li.ai { background: color-mix(in srgb, var(--a-ai) 8%, var(--paper)); }
+  .chip.app, .chip.threat, .chip.platform, .chip.privacy, .chip.ai { background: color-mix(in srgb, currentColor 8%, transparent); }
+  .work article h3 { color: var(--ink); }
+  .records .w { color: var(--teal); font-weight: 500; }
+  .btn.primary { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .btn.primary:hover { background: var(--ink); border-color: var(--ink); }
+  #stack .s0 { stop-color: var(--plate-top); stop-opacity: .95; }
+  #stack .s1 { stop-color: color-mix(in srgb, var(--a-ai) 14%, var(--paper-2)); stop-opacity: .7; }
+  #stack .g0 { stop-opacity: .42; }
+
+  /* bottom strip */
+  .strip {
+    color: var(--muted); text-align: center;
+    font-family: var(--sans); font-size: 13px; letter-spacing: .02em;
+    padding: 8px 16px 12px;
+  }
+
+  /* footer */
+  footer.end { border-top: 1px solid var(--rule); padding: 56px 0 48px; display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 40px; }
+  footer.end h2 { font-weight: 500; font-size: 26px; margin: 0; color: var(--teal); }
+  footer.end p { margin: 0 0 18px; max-width: 34em; color: var(--ink-2); }
+  .fine { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-top: 28px !important; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px) {
+    .intro { grid-template-columns: 1fr; padding-top: 40px; row-gap: 32px; }
+    section.block, footer.end { grid-template-columns: 1fr; gap: 18px; padding: 44px 0; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 17.5px; }
+    .wrap { padding: 0 18px; }
+    .bar nav { display: none; }
+    .hero p.lede { font-size: 19px; }
+    .questions li { font-size: 18px; margin-left: -14px; padding: 14px 14px 14px 40px; }
+    .questions li::before { left: 20px; top: 27px; }
+    .expertise li { grid-template-columns: 1fr; gap: 6px; }
+    .records li { grid-template-columns: 1fr; }
+    .records .w { grid-column: 1; grid-row: auto; text-align: left; }
+    .ask { margin-left: 0; margin-top: 4px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <a class="home" href="#top" aria-label="Back to top">
+      <span class="mark" aria-hidden="true">A</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#work">Work</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="intro">
+      <div class="hero">
+        <h1>
+          <span class="name">Hi, I'm Abhishek!</span>
+        </h1>
+        <p class="lede">I am a mobile security engineer working across the mobile stack, from the applications people use every day to the operating system beneath them. I focus on making these systems secure by design, assessing the threats they face and protecting the personal data they handle, with applied AI supporting each of these efforts.</p>
+      </div>
+
+
+      <figure class="stack">
+        <svg id="stack" viewBox="0 0 820 720" role="img" aria-labelledby="stack-title"><title id="stack-title">A phone with its software stack (kernel, HAL, runtime and applications) rising from the screen, inside a sphere representing the wider ecosystem. Four focus areas, application security, threat assessment, platform security and privacy assurance, orbit an applied AI core.</title><defs><radialGradient id="ai-glow" cx="50%" cy="50%" r="50%"><stop offset="0" class="g0"/><stop offset=".55" class="g1"/><stop offset="1" class="g2"/></radialGradient><radialGradient id="sphere-fill" cx="38%" cy="30%" r="75%"><stop offset="0" class="s0"/><stop offset="1" class="s1"/></radialGradient><linearGradient id="beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" class="b0"/><stop offset="1" class="b1"/></linearGradient><clipPath id="back" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="820" height="372"/></clipPath><clipPath id="front" clipPathUnits="userSpaceOnUse"><rect x="0" y="372" width="820" height="720"/></clipPath></defs><circle cx="410" cy="372" r="330" class="sphere"/><ellipse cx="410" cy="167.4" rx="258.9" ry="41.4" class="lat"/><ellipse cx="410" cy="273.0" rx="314.8" ry="50.4" class="lat"/><ellipse cx="410" cy="372.0" rx="330.0" ry="52.8" class="lat"/><ellipse cx="410" cy="471.0" rx="314.8" ry="50.4" class="lat"/><ellipse cx="410" cy="576.6" rx="258.9" ry="41.4" class="lat"/><ellipse cx="410" cy="372" rx="115.5" ry="330" class="lat"/><ellipse cx="410" cy="372" rx="237.6" ry="330" class="lat"/><circle cx="410" cy="372" r="200" fill="url(#ai-glow)"/><ellipse cx="410" cy="372" rx="200" ry="60.0" transform="rotate(-9 410 372)" class="orbit orbit-app"/><ellipse cx="410" cy="372" rx="240" ry="67.2" transform="rotate(6 410 372)" class="orbit orbit-threat"/><ellipse cx="410" cy="372" rx="272" ry="73.4" transform="rotate(-5 410 372)" class="orbit orbit-platform"/><ellipse cx="410" cy="372" rx="298" ry="86.4" transform="rotate(9 410 372)" class="orbit orbit-privacy"/><g clip-path="url(#back)"><g transform="translate(410,372) rotate(-9) scale(1,0.3)"><g transform="rotate(200)"><g class="spin" style="animation-duration:80s"><line x1="0" y1="0" x2="200" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(200,0)"><g class="spin rev" style="animation-duration:80s"><g transform="rotate(-200)"><g transform="scale(1,3.3333) rotate(9)"><rect x="-124" y="-18" width="248" height="36" rx="18" class="pill pill-app"/><circle cx="-105" r="6.5" class="dot dot-app"/><text x="12" y="6" text-anchor="middle" class="pill-t">Application Security</text></g></g></g></g></g></g></g></g><g clip-path="url(#back)"><g transform="translate(410,372) rotate(6) scale(1,0.28)"><g transform="rotate(15)"><g class="spin" style="animation-duration:100s"><line x1="0" y1="0" x2="240" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(240,0)"><g class="spin rev" style="animation-duration:100s"><g transform="rotate(-15)"><g transform="scale(1,3.5714) rotate(-6)"><rect x="-109" y="-18" width="217" height="36" rx="18" class="pill pill-threat"/><circle cx="-90" r="6.5" class="dot dot-threat"/><text x="12" y="6" text-anchor="middle" class="pill-t">Threat Assessment</text></g></g></g></g></g></g></g></g><g clip-path="url(#back)"><g transform="translate(410,372) rotate(-5) scale(1,0.27)"><g transform="rotate(150)"><g class="spin" style="animation-duration:120s"><line x1="0" y1="0" x2="272" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(272,0)"><g class="spin rev" style="animation-duration:120s"><g transform="rotate(-150)"><g transform="scale(1,3.7037) rotate(5)"><rect x="-109" y="-18" width="217" height="36" rx="18" class="pill pill-platform"/><circle cx="-90" r="6.5" class="dot dot-platform"/><text x="12" y="6" text-anchor="middle" class="pill-t">Platform Security</text></g></g></g></g></g></g></g></g><g clip-path="url(#back)"><g transform="translate(410,372) rotate(9) scale(1,0.29)"><g transform="rotate(320)"><g class="spin" style="animation-duration:140s"><line x1="0" y1="0" x2="298" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(298,0)"><g class="spin rev" style="animation-duration:140s"><g transform="rotate(-320)"><g transform="scale(1,3.4483) rotate(-9)"><rect x="-109" y="-18" width="217" height="36" rx="18" class="pill pill-privacy"/><circle cx="-90" r="6.5" class="dot dot-privacy"/><text x="12" y="6" text-anchor="middle" class="pill-t">Privacy Assurance</text></g></g></g></g></g></g></g></g><polygon points="319.1,559.5 386.6,598.5 500.9,532.5 500.9,266.5 433.4,227.5 319.1,293.5" class="beam" fill="url(#beam)"/><g class="phone"><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,506.5)"><rect x="0" y="0" width="130" height="220" rx="18" class="phone-side" vector-effect="non-scaling-stroke"/></g><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,493.5)"><rect x="0" y="0" width="130" height="220" rx="18" class="phone-body" vector-effect="non-scaling-stroke"/><rect x="6" y="10" width="118" height="200" rx="12" class="phone-screen" vector-effect="non-scaling-stroke"/><rect x="52" y="4" width="26" height="3" rx="1.5" class="phone-notch" vector-effect="non-scaling-stroke"/></g></g><g class="layer" data-i="0" data-k="kern"><g class="lw"><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,422.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="side" vector-effect="non-scaling-stroke"/></g><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,413.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="face" vector-effect="non-scaling-stroke"/><line x1="14" y1="92" x2="35" y2="92" class="trace" vector-effect="non-scaling-stroke"/><line x1="95" y1="92" x2="116" y2="92" class="trace" vector-effect="non-scaling-stroke"/><line x1="47" y1="40" x2="47" y2="80" class="trace" vector-effect="non-scaling-stroke"/><line x1="47" y1="140" x2="47" y2="182" class="trace" vector-effect="non-scaling-stroke"/><line x1="14" y1="101" x2="35" y2="101" class="trace" vector-effect="non-scaling-stroke"/><line x1="95" y1="101" x2="116" y2="101" class="trace" vector-effect="non-scaling-stroke"/><line x1="56" y1="40" x2="56" y2="80" class="trace" vector-effect="non-scaling-stroke"/><line x1="56" y1="140" x2="56" y2="182" class="trace" vector-effect="non-scaling-stroke"/><line x1="14" y1="110" x2="35" y2="110" class="trace" vector-effect="non-scaling-stroke"/><line x1="95" y1="110" x2="116" y2="110" class="trace" vector-effect="non-scaling-stroke"/><line x1="65" y1="40" x2="65" y2="80" class="trace" vector-effect="non-scaling-stroke"/><line x1="65" y1="140" x2="65" y2="182" class="trace" vector-effect="non-scaling-stroke"/><line x1="14" y1="119" x2="35" y2="119" class="trace" vector-effect="non-scaling-stroke"/><line x1="95" y1="119" x2="116" y2="119" class="trace" vector-effect="non-scaling-stroke"/><line x1="74" y1="40" x2="74" y2="80" class="trace" vector-effect="non-scaling-stroke"/><line x1="74" y1="140" x2="74" y2="182" class="trace" vector-effect="non-scaling-stroke"/><line x1="14" y1="128" x2="35" y2="128" class="trace" vector-effect="non-scaling-stroke"/><line x1="95" y1="128" x2="116" y2="128" class="trace" vector-effect="non-scaling-stroke"/><line x1="83" y1="40" x2="83" y2="80" class="trace" vector-effect="non-scaling-stroke"/><line x1="83" y1="140" x2="83" y2="182" class="trace" vector-effect="non-scaling-stroke"/><path d="M65 52 L104 66 V108 C104 136 86 156 65 168 C44 156 26 136 26 108 V66 Z" class="shield" vector-effect="non-scaling-stroke"/><rect x="39" y="84" width="52" height="52" rx="6" class="chip" vector-effect="non-scaling-stroke"/><rect x="49" y="94" width="32" height="32" rx="3" class="core" vector-effect="non-scaling-stroke"/></g></g></g><g class="layer" data-i="1" data-k="hal"><g class="lw"><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,360.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="side" vector-effect="non-scaling-stroke"/></g><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,351.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="face" vector-effect="non-scaling-stroke"/><line x1="65" y1="18" x2="65" y2="202" class="bus" vector-effect="non-scaling-stroke"/><rect x="12" y="26" width="38" height="32" rx="6" class="mod" vector-effect="non-scaling-stroke"/><line x1="50" y1="42" x2="65" y2="42" class="bus" vector-effect="non-scaling-stroke"/><rect x="80" y="66" width="38" height="32" rx="6" class="mod" vector-effect="non-scaling-stroke"/><line x1="80" y1="82" x2="65" y2="82" class="bus" vector-effect="non-scaling-stroke"/><rect x="12" y="106" width="38" height="32" rx="6" class="mod" vector-effect="non-scaling-stroke"/><line x1="50" y1="122" x2="65" y2="122" class="bus" vector-effect="non-scaling-stroke"/><rect x="80" y="146" width="38" height="32" rx="6" class="mod" vector-effect="non-scaling-stroke"/><line x1="80" y1="162" x2="65" y2="162" class="bus" vector-effect="non-scaling-stroke"/><circle cx="31" cy="42" r="7" class="glyph" vector-effect="non-scaling-stroke"/><path d="M90 82 q9 -10 18 0 M94 86 q5 -5 10 0" class="glyph" vector-effect="non-scaling-stroke"/><path d="M22 116 h18 M22 122 h18 M22 128 h18" class="glyph" vector-effect="non-scaling-stroke"/><rect x="90" y="154" width="18" height="16" rx="3" class="glyph" vector-effect="non-scaling-stroke"/></g></g></g><g class="layer" data-i="2" data-k="fw"><g class="lw"><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,298.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="side" vector-effect="non-scaling-stroke"/></g><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,289.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="face" vector-effect="non-scaling-stroke"/><rect x="12" y="14" width="30" height="30" rx="6" class="blk on" vector-effect="non-scaling-stroke"/><rect x="50" y="14" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="88" y="14" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="12" y="54" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="50" y="54" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="88" y="54" width="30" height="30" rx="6" class="blk on" vector-effect="non-scaling-stroke"/><rect x="12" y="94" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="50" y="94" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="88" y="94" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="12" y="134" width="30" height="30" rx="6" class="blk on" vector-effect="non-scaling-stroke"/><rect x="50" y="134" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="88" y="134" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="12" y="174" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="50" y="174" width="30" height="30" rx="6" class="blk" vector-effect="non-scaling-stroke"/><rect x="88" y="174" width="30" height="30" rx="6" class="blk on" vector-effect="non-scaling-stroke"/><rect x="45" y="88" width="40" height="76" rx="9" class="sandbox" vector-effect="non-scaling-stroke"/></g></g></g><g class="layer" data-i="3" data-k="app"><g class="lw"><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,236.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="side" vector-effect="non-scaling-stroke"/></g><g transform="matrix(0.5196,0.3000,-0.5196,0.3000,433.4,227.5)"><rect x="0" y="0" width="130" height="220" rx="16" class="face" vector-effect="non-scaling-stroke"/><rect x="8" y="12" width="114" height="196" rx="11" class="screen" vector-effect="non-scaling-stroke"/><rect x="17" y="24" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="43" y="24" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="69" y="24" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="95" y="24" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="17" y="52" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="43" y="52" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="66" y="49" width="24" height="24" rx="7" class="ring-threat" vector-effect="non-scaling-stroke"/><rect x="69" y="52" width="18" height="18" rx="5" class="icon-flag" vector-effect="non-scaling-stroke"/><rect x="95" y="52" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="17" y="80" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="43" y="80" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="69" y="80" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="95" y="80" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="17" y="108" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="43" y="108" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="69" y="108" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><rect x="95" y="108" width="18" height="18" rx="5" class="icon" vector-effect="non-scaling-stroke"/><line x1="22" y1="168" x2="50" y2="150" class="ai-edge" vector-effect="non-scaling-stroke"/><line x1="22" y1="168" x2="50" y2="186" class="ai-edge" vector-effect="non-scaling-stroke"/><line x1="50" y1="150" x2="80" y2="150" class="ai-edge" vector-effect="non-scaling-stroke"/><line x1="50" y1="150" x2="80" y2="186" class="ai-edge" vector-effect="non-scaling-stroke"/><line x1="50" y1="186" x2="80" y2="150" class="ai-edge" vector-effect="non-scaling-stroke"/><line x1="50" y1="186" x2="80" y2="186" class="ai-edge" vector-effect="non-scaling-stroke"/><line x1="80" y1="150" x2="108" y2="168" class="ai-edge" vector-effect="non-scaling-stroke"/><line x1="80" y1="186" x2="108" y2="168" class="ai-edge" vector-effect="non-scaling-stroke"/><circle cx="22" cy="168" r="4.4" class="ai-node" vector-effect="non-scaling-stroke"/><circle cx="50" cy="150" r="4.4" class="ai-node" vector-effect="non-scaling-stroke"/><circle cx="50" cy="186" r="4.4" class="ai-node" vector-effect="non-scaling-stroke"/><circle cx="80" cy="150" r="4.4" class="ai-node" vector-effect="non-scaling-stroke"/><circle cx="80" cy="186" r="4.4" class="ai-node" vector-effect="non-scaling-stroke"/><circle cx="108" cy="168" r="4.4" class="ai-node" vector-effect="non-scaling-stroke"/></g></g></g><line x1="410" y1="546" x2="410" y2="280" class="data"/><circle cx="410" cy="466" r="7.5" class="data-halo"/><circle cx="410" cy="466" r="3.8" class="data-dot"/><circle cx="410" cy="404" r="7.5" class="data-halo"/><circle cx="410" cy="404" r="3.8" class="data-dot"/><circle cx="410" cy="342" r="7.5" class="data-halo"/><circle cx="410" cy="342" r="3.8" class="data-dot"/><circle cx="410" cy="280" r="7.5" class="data-halo"/><circle cx="410" cy="280" r="3.8" class="data-dot"/><line x1="506.9" y1="452.5" x2="518.9" y2="452.5" class="lead"/><text x="522.9" y="457.5" class="tag">Kernel</text><line x1="506.9" y1="390.5" x2="518.9" y2="390.5" class="lead"/><text x="522.9" y="395.5" class="tag">HAL</text><line x1="506.9" y1="328.5" x2="518.9" y2="328.5" class="lead"/><text x="522.9" y="333.5" class="tag">Runtime</text><line x1="506.9" y1="266.5" x2="518.9" y2="266.5" class="lead"/><text x="522.9" y="271.5" class="tag">Applications</text><g clip-path="url(#front)"><g transform="translate(410,372) rotate(-9) scale(1,0.3)"><g transform="rotate(200)"><g class="spin" style="animation-duration:80s"><line x1="0" y1="0" x2="200" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(200,0)"><g class="spin rev" style="animation-duration:80s"><g transform="rotate(-200)"><g transform="scale(1,3.3333) rotate(9)"><rect x="-124" y="-18" width="248" height="36" rx="18" class="pill pill-app"/><circle cx="-105" r="6.5" class="dot dot-app"/><text x="12" y="6" text-anchor="middle" class="pill-t">Application Security</text></g></g></g></g></g></g></g></g><g clip-path="url(#front)"><g transform="translate(410,372) rotate(6) scale(1,0.28)"><g transform="rotate(15)"><g class="spin" style="animation-duration:100s"><line x1="0" y1="0" x2="240" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(240,0)"><g class="spin rev" style="animation-duration:100s"><g transform="rotate(-15)"><g transform="scale(1,3.5714) rotate(-6)"><rect x="-109" y="-18" width="217" height="36" rx="18" class="pill pill-threat"/><circle cx="-90" r="6.5" class="dot dot-threat"/><text x="12" y="6" text-anchor="middle" class="pill-t">Threat Assessment</text></g></g></g></g></g></g></g></g><g clip-path="url(#front)"><g transform="translate(410,372) rotate(-5) scale(1,0.27)"><g transform="rotate(150)"><g class="spin" style="animation-duration:120s"><line x1="0" y1="0" x2="272" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(272,0)"><g class="spin rev" style="animation-duration:120s"><g transform="rotate(-150)"><g transform="scale(1,3.7037) rotate(5)"><rect x="-109" y="-18" width="217" height="36" rx="18" class="pill pill-platform"/><circle cx="-90" r="6.5" class="dot dot-platform"/><text x="12" y="6" text-anchor="middle" class="pill-t">Platform Security</text></g></g></g></g></g></g></g></g><g clip-path="url(#front)"><g transform="translate(410,372) rotate(9) scale(1,0.29)"><g transform="rotate(320)"><g class="spin" style="animation-duration:140s"><line x1="0" y1="0" x2="298" y2="0" class="thread" vector-effect="non-scaling-stroke"/><g transform="translate(298,0)"><g class="spin rev" style="animation-duration:140s"><g transform="rotate(-320)"><g transform="scale(1,3.4483) rotate(-9)"><rect x="-109" y="-18" width="217" height="36" rx="18" class="pill pill-privacy"/><circle cx="-90" r="6.5" class="dot dot-privacy"/><text x="12" y="6" text-anchor="middle" class="pill-t">Privacy Assurance</text></g></g></g></g></g></g></g></g><circle cx="124.2" cy="207.0" r="15" class="node node-cloud"/><g class="nglyph"><path d="M116.2 211.0 h16 a4 4 0 0 0 0 -8 a6 6 0 0 0 -11 -2 a4.5 4.5 0 0 0 -5 10 z"/></g><text x="124.2" y="181.0" text-anchor="middle" class="eco-n">Cloud Services</text><circle cx="255.1" cy="80.6" r="15" class="node node-net"/><g class="nglyph"><path d="M247.1 79.6 a11 11 0 0 1 16 0 M250.1 82.6 a7 7 0 0 1 10 0"/><circle cx="255.1" cy="85.6" r="1.4"/></g><text x="255.1" y="54.6" text-anchor="middle" class="eco-n">Networks</text><circle cx="564.9" cy="80.6" r="22" class="scan"/><circle cx="564.9" cy="80.6" r="15" class="node node-store"/><g class="nglyph"><path d="M557.9 77.6 h14 l-1.5 10 h-11 z M560.9 77.6 v-2 a4 4 0 0 1 8 0 v2"/></g><text x="564.9" y="54.6" text-anchor="middle" class="eco-n">App Stores</text><circle cx="695.8" cy="207.0" r="15" class="node node-sdk"/><g class="nglyph"><path d="M692.8 200.0 q-4 0 -4 3.5 v1.5 q0 2 -2 2 q2 0 2 2 v1.5 q0 3.5 4 3.5 M698.8 200.0 q4 0 4 3.5 v1.5 q0 2 2 2 q-2 0 -2 2 v1.5 q0 3.5 -4 3.5"/></g><text x="695.8" y="181.0" text-anchor="middle" class="eco-n">Third-Party SDKs</text><circle cx="124.2" cy="537.0" r="15" class="node node-watch"/><g class="nglyph"><rect x="119.2" y="531.0" width="10" height="12" rx="3"/><path d="M121.2 531.0 v-3 h6 v3 M121.2 543.0 v3 h6 v-3"/></g><text x="124.2" y="572.0" text-anchor="middle" class="eco-n">Wearables and IoT</text><circle cx="255.1" cy="663.4" r="15" class="node node-update"/><g class="nglyph"><path d="M261.1 661.4 a6.5 6.5 0 1 0 0.5 4 M261.6 656.4 v5 h-5"/></g><text x="255.1" y="698.4" text-anchor="middle" class="eco-n">OS Updates</text><circle cx="680.3" cy="561.3" r="15" class="node node-pay"/><g class="nglyph"><rect x="672.3" y="555.8" width="16" height="11" rx="2"/><path d="M672.3 559.8 h16"/></g><text x="680.3" y="596.3" text-anchor="middle" class="eco-n">Payments</text><text x="410" y="20" text-anchor="middle" class="eco-t">Mobile Ecosystem</text><text x="410" y="188" text-anchor="middle" class="ai-t">Applied AI</text><text x="410" y="210" text-anchor="middle" class="ai-s">Powering Every Area</text><path d="M565 81 Q 568 200 436 262" class="qpath q2"/><path d="M410 280 C 410 236, 230 246, 140 215" class="qpath q4"/><g class="qcap" data-n="1" transform="translate(160,300)"><rect x="-156" y="-19" width="311" height="38" rx="19" class="qbg"/><circle cx="-136" r="12" class="qmark-bg"/><text x="-136" y="5.5" text-anchor="middle" class="qmark">?</text><text x="-115" y="6" class="qtext">Intelligent and still secure?</text></g><g class="qcap" data-n="2" transform="translate(650,128)"><rect x="-160" y="-19" width="320" height="38" rx="19" class="qbg"/><circle cx="-140" r="12" class="qmark-bg"/><text x="-140" y="5.5" text-anchor="middle" class="qmark">?</text><text x="-119" y="6" class="qtext">What is this app really doing?</text></g><g class="qcap" data-n="3" transform="translate(470,652)"><rect x="-173" y="-19" width="346" height="38" rx="19" class="qbg"/><circle cx="-153" r="12" class="qmark-bg"/><text x="-153" y="5.5" text-anchor="middle" class="qmark">?</text><text x="-132" y="6" class="qtext">Secure by design, at every layer?</text></g><g class="qcap" data-n="4" transform="translate(232,140)"><rect x="-151" y="-19" width="303" height="38" rx="19" class="qbg"/><circle cx="-131" r="12" class="qmark-bg"/><text x="-131" y="5.5" text-anchor="middle" class="qmark">?</text><text x="-110" y="6" class="qtext">Where does personal data go?</text></g></svg>
+      </figure>
+    </div>
+
+    <!-- ---------- research interests ---------- -->
+    <section class="block" id="research">
+      <h2>Research Interests</h2>
+      <div class="col">
+        <p class="research-intro">Mobile devices are now used for an ever wider range of everyday activities, and the <b>personal and sensitive data</b> they handle keeps growing. Applications and the platform beneath them are given varying levels of access to this data, which raises several related challenges, including:</p>
+        <ul class="questions" id="questions">
+          <li data-q="1">How can mobile applications deliver <b>useful and intelligent services</b> while keeping <b>user data secure</b>?</li>
+          <li data-q="2">How can the <b>behavior of mobile applications</b> be assessed reliably and at scale, especially when that behavior is <b>deliberately hidden</b>?</li>
+          <li data-q="3">How can a mobile platform be made <b>secure by design</b>, and how can that security be <b>verified systematically</b> across its architectural layers?</li>
+          <li data-q="4">How can the <b>security and privacy of personal data</b> be guaranteed, and the collection and use of that data be made <b>transparent</b>?</li>
+        </ul>
+        <p class="research-close">My work aims to address these challenges across the <b>mobile stack</b>, from applications to the underlying platform and its wider ecosystem, with a focus on <b>application security</b>, <b>threat assessment</b>, <b>platform security</b> and <b>privacy assurance</b>, supported by <b>applied AI</b>.</p>
+      </div>
+    </section>
+
+    <!-- ---------- selected work ---------- -->
+    <section class="block" id="work">
+      <h2>Work Highlights</h2>
+      <div class="col work">
+        <article>
+          <h3>On-Device Privacy Observability for Mobile Apps</h3>
+          <p>A platform that tracks and monitors how mobile apps handle personal data.</p>
+          <div class="meta"><span class="chip privacy">Privacy Assurance</span><span class="chip platform">Platform Security</span><span class="chip threat">Threat Assessment</span><a class="ask" href="#contact"><svg class="ask-i" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="M3 5.5 L10 11 L17 5.5"/></svg><span>Learn More</span></a></div>
+        </article>
+        <article>
+          <h3>Machine Learning Based Malware Detection</h3>
+          <p>A machine learning engine that detects malicious mobile apps, used by millions of people.</p>
+          <div class="meta"><span class="chip threat">Threat Assessment</span><span class="chip ai">Applied AI</span><a class="ask" href="#contact"><svg class="ask-i" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="M3 5.5 L10 11 L17 5.5"/></svg><span>Learn More</span></a></div>
+        </article>
+        <article>
+          <h3>Mobile App Behavior Analysis</h3>
+          <p>A platform for analyzing the behavior of mobile apps, including apps that try to hide it.</p>
+          <div class="meta"><span class="chip app">Application Security</span><span class="chip threat">Threat Assessment</span><a class="ask" href="#contact"><svg class="ask-i" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="M3 5.5 L10 11 L17 5.5"/></svg><span>Learn More</span></a></div>
+        </article>
+        <article>
+          <h3>Validation of Mobile OS Hardening</h3>
+          <p>An automated framework that checks mobile OS hardening across architectural layers.</p>
+          <div class="meta"><span class="chip platform">Platform Security</span><a class="ask" href="#contact"><svg class="ask-i" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="M3 5.5 L10 11 L17 5.5"/></svg><span>Learn More</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- areas of expertise ---------- -->
+    <section class="block" id="expertise">
+      <h2>Areas of Expertise</h2>
+      <div class="col">
+        <ul class="areas">
+          <li class="app">Application Security<span>Building and analyzing mobile apps that keep user data safe.</span></li>
+          <li class="threat">Threat Assessment<span>Assessing mobile apps for malicious or risky behavior.</span></li>
+          <li class="platform">Platform Security<span>Securing the mobile platform across its architectural layers.</span></li>
+          <li class="privacy">Privacy Assurance<span>Tracking how apps collect, store and share personal data.</span></li>
+          <li class="ai">Applied AI<span>Using AI to strengthen each of the areas above.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- certifications ---------- -->
+    <section class="block" id="credentials">
+      <h2>Certifications</h2>
+      <div class="col">
+        <ul class="records">
+          <li><span class="t">PC DPO 360, Privacy in Data &amp; AI</span><span class="w">March 2026</span><span class="d">PrivaSapien Technologies</span></li>
+          <li><span class="t">eJPT, Junior Penetration Tester</span><span class="w">April 2026</span><span class="d">INE Security</span></li>
+          <li><span class="t">CCEP, Certified Cybersecurity Educator Professional</span><span class="w">November 2025</span><span class="d">Red Team Leaders</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="end" id="contact">
+    <h2>Contact</h2>
+    <div>
+      <p>I welcome inquiries regarding research collaboration, speaking engagements and professional opportunities in mobile security and privacy.</p>
+      <div class="actions">
+        <a class="btn primary" id="email-btn" href="mailto:abhishekbhardwaj090@gmail.com">abhishekbhardwaj090@gmail.com</a>
+        <a class="btn" href="https://github.com/bhardwajAbhi">github.com/bhardwajAbhi</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="strip">Last updated October 2026</div>
+
+<script>
+(function () {
+  const email = document.getElementById('email-btn');
+  const base = 'mailto:abhishekbhardwaj090@gmail.com';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // scroll to the contact section, then briefly highlight the email button
+  function goToContact(subject) {
+    email.href = subject ? base + '?subject=' + encodeURIComponent(subject) : base;
+    document.getElementById('contact').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    email.classList.remove('flash');
+    setTimeout(() => { void email.offsetWidth; email.classList.add('flash'); }, reduce ? 0 : 700);
+  }
+  email.addEventListener('animationend', () => email.classList.remove('flash'));
+
+  document.querySelectorAll('a.ask').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    goToContact('Inquiry: ' + a.closest('article').querySelector('h3').textContent);
+  }));
+  // ---------- research questions in the diagram ----------
+  const svg = document.getElementById('stack');
+  const listItems = document.querySelectorAll('#questions li');
+  let current = 0, timer = null, resume = null, visible = true;
+
+  function show(n) {
+    current = n;
+    if (n) svg.setAttribute('data-q', n); else svg.removeAttribute('data-q');
+  }
+  function start() {
+    stop();
+    if (reduce || !visible) return;
+    timer = setInterval(() => show(current % 4 + 1), 6000);
+  }
+  function stop() { clearInterval(timer); timer = null; clearTimeout(resume); }
+  function hold(n) { stop(); show(n); }
+  function release() { clearTimeout(resume); resume = setTimeout(start, 4000); }
+
+  listItems.forEach(li => {
+    li.addEventListener('mouseenter', () => { li.classList.add('on'); hold(+li.dataset.q); });
+    li.addEventListener('mouseleave', () => { li.classList.remove('on'); release(); });
+    li.addEventListener('click', () => { hold(+li.dataset.q); release(); });
+  });
+  new IntersectionObserver(es => {
+    visible = es[0].isIntersecting;
+    if (visible && !timer) start(); else if (!visible) stop();
+  }).observe(svg);
+  setTimeout(() => { if (!reduce) { show(1); start(); } }, 2500);
+
+})();
+</script>
+</body>
+</html>
