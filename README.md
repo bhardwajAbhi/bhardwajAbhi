@@ -1,3 +1,10 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/mobile-security-diagram-dark.svg">
+  <img align="right" width="360" src="assets/mobile-security-diagram-light.svg" alt="Diagram of the mobile stack inside the mobile ecosystem, with four focus areas orbiting an applied AI core">
+</picture>
+
+<div align="justify">
+
 Mobile devices are now used for an ever wider range of everyday activities, and the **personal and sensitive information** they handle continues to grow. Applications and the platform beneath them are granted varying degrees of access to this information, which raises several related challenges:
 
 - How can mobile applications be designed to deliver **useful and intelligent services** while keeping **user data secure**?
@@ -5,7 +12,15 @@ Mobile devices are now used for an ever wider range of everyday activities, and 
 - How can a mobile platform be made **secure by design**, and how can that security be **verified systematically** across its architectural layers?
 - How can the **security and privacy of personal data** be guaranteed, and the collection and use of that data be made **transparent**?
 
+</div>
+
+<br clear="right"/>
+
+<div align="justify">
+
 My work is oriented toward addressing these challenges across the **mobile stack**, from applications to the underlying platform and its wider ecosystem, with a focus on **application security**, **threat assessment**, **platform security** and **privacy assurance**, supported by **applied AI**.
+
+</div>
 
 <!--
 ---
